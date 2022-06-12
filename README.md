@@ -1,1 +1,1 @@
-# Useful tips and tricks for bash, Python, etc. 
+# Useful tips and tricks for Bash, Python, etc. 
