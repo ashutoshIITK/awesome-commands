@@ -2,10 +2,16 @@
 
 ## String Operations
 
-##### Find the exact occurrence of strings in a folder
+#### Find the exact occurrence of strings in a folder
 
 ```bash
 for string in string1 string2 string3 string4; do grep -rohw $string . | wc -l; done
+```
+
+#### Replace stringA with stringB (inplace) in all the files inside a folder
+```bash
+find ./ -type f -exec sed -i 's/stringA/stringB/g' {} \;
+
 ```
 ## Image processing
 
