@@ -7,7 +7,17 @@
 ```bash
 for string in string1 string2 string3 string4; do grep -rohw $string . | wc -l; done
 ```
+## Image processing
 
+#### Reduce size of the images
+```bash
+mogrify -quality 50% *
+```
+#### Load exact image channels OpenCV
+- By default, OpenCV imread loads three channels (W, H, C). To override this behaviour, use the following flag while using cv2.imread
+```bash
+frame = cv2.imread("/path/of/image", CV2.IMREAD_UNCHANGED)
+```
 ## File Management
 
 ##### Move/Copy n files from a folder
