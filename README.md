@@ -13,6 +13,12 @@ for string in string1 string2 string3 string4; do grep -rohw $string . | wc -l; 
 find ./ -type f -exec sed -i 's/stringA/stringB/g' {} \;
 
 ```
+
+#### For Loop (Range) in Bash
+```bash
+for i in {0..N..STEP}; do echo "$i"; done
+```
+
 ## Image processing
 
 #### Reduce size of the images
