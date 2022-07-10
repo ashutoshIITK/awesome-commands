@@ -49,6 +49,16 @@ rm -f /tmp/.X11-unix/X6
 
 In the above command, replace X6 with the display number on which you are running VNC server. For example, if you started VNC server on screen 1 as vncserver :1 -geometry 1920x1200, then please use X1. Likewise, if you were running VNC server on screen 2, then use X2, and so on.
 
+##### Hide PyGame Window
+
+If you are running a script externally using bash loop and if it is required to process without requiring the GUI (PyGame) window to show up, just put the "SDL_VIDEODRIVER" to environment variable as "dummy".
+
+```python
+import os
+os.environ["SDL_VIDEODRIVER"] = "dummy"
+os.
+```
+
 ## Web Development
 
 ## Application Software
