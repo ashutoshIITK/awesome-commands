@@ -27,7 +27,7 @@ mogrify -quality 50% *
 ```
 #### Load exact image channels OpenCV
 - By default, OpenCV imread loads three channels (W, H, C). To override this behaviour, use the following flag while using cv2.imread
-```bash
+```python
 frame = cv2.imread("/path/of/image", CV2.IMREAD_UNCHANGED)
 ```
 ## File Management
@@ -56,7 +56,6 @@ If you are running a script externally using bash loop and if it is required to 
 ```python
 import os
 os.environ["SDL_VIDEODRIVER"] = "dummy"
-os.
 ```
 
 ## Web Development
