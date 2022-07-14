@@ -21,6 +21,17 @@ for i in {0..N..STEP}; do echo "$i"; done
 
 ## Image processing
 
+### Save numpy array as image (Lossless)
+```python
+from PIL import Image
+import numpy as np
+
+np_arr = np.load("../dataset/training_dataset/img_hr.npy") 
+# 400 x 400
+Image.fromarray(np_arr).save(f'../dataset/swinir/hr/{idx}.tif')
+
+```
+
 ### Reduce size of the images
 ```bash
 mogrify -quality 50% *
