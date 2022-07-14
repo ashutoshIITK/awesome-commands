@@ -26,9 +26,15 @@ for i in {0..N..STEP}; do echo "$i"; done
 from PIL import Image
 import numpy as np
 
-np_arr = np.load("../dataset/training_dataset/img_hr.npy") 
-# 400 x 400
-Image.fromarray(np_arr).save(f'../dataset/swinir/hr/{idx}.tif')
+hr = np.load("../dataset/training_dataset/img_hr.npy")
+lr = np.load("../dataset/training_dataset/img_lr.npy")
+
+for idx in range(hr.shape[0]):
+    print(idx,end="\r")
+    file_hr = hr[idx,:,:]
+    file_lr = lr[idx,:,:]
+    Image.fromarray(file_hr).save(f'../dataset/swinir/hr/{idx}.tif')
+    Image.fromarray(file_lr).save(f'../dataset/swinir/lr/{idx}.tif')
 
 ```
 
