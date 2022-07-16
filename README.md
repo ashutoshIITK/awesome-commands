@@ -78,3 +78,9 @@ os.environ["SDL_VIDEODRIVER"] = "dummy"
 ## Web Development
 
 ## Application Software
+
+### Running CARLA on VNC
+```bash
+Xvfb :2 -screen 0 1024x768x24 +extension RANDR &
+DISPLAY=:2 ./CarlaUE4.sh -carla-port=2000
+```
