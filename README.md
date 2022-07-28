@@ -49,7 +49,11 @@ frame = cv2.imread("/path/of/image", CV2.IMREAD_UNCHANGED)
 ```
 ## File Management
 
+### Looping over output of bash command
 
+```bash
+for f in $(find . -name "*.png"); do echo "$f"; done
+```
 
 
 ## Remote Management
