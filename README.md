@@ -55,6 +55,11 @@ frame = cv2.imread("/path/of/image", CV2.IMREAD_UNCHANGED)
 for f in $(find . -name "*.png"); do echo "$f"; done
 ```
 
+### Remove extension in bash
+```bash
+for i in *; do echo "${i%.txt}">> labels.txt; done
+```
+
 
 ## Remote Management
 
