@@ -60,6 +60,11 @@ for f in $(find . -name "*.png"); do echo "$f"; done
 for i in *; do echo "${i%.txt}">> labels.txt; done
 ```
 
+### Copy/Move n random files from a folder
+```bash
+shuf -zn100 -e *.jpg | xargs -0 cp -vt /home/$USER/Desktop/random/veri_selected/
+```
+
 
 ## Remote Management
 
