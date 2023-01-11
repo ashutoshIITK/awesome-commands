@@ -65,7 +65,7 @@ for i in *; do echo "${i%.txt}">> labels.txt; done
 shuf -zn100 -e *.jpg | xargs -0 cp -vt /home/$USER/Desktop/random/veri_selected/
 ```
 
-### Trimming video with starting position and duration 
+### Trimming video with starting position and duration (-t)
 
 ```bash
 ffmpeg -i input_video.mp4 -ss 00:00:00 -t 00:00:30 -c copy output_video.mp4
