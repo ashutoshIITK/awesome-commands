@@ -55,6 +55,12 @@ frame = cv2.imread("/path/of/image", CV2.IMREAD_UNCHANGED)
 for f in $(find . -name "*.png"); do echo "$f"; done
 ```
 
+### Removing/Clearning cache memory
+
+```bash
+sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
+```
+
 ### Remove extension in bash
 ```bash
 for i in *; do echo "${i%.txt}">> labels.txt; done
