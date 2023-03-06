@@ -61,6 +61,11 @@ for f in $(find . -name "*.png"); do echo "$f"; done
 sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 ```
 
+### Kill when even pgrep does not work
+```bash
+for var in $(pgrep -f 'SCRIPT_KEYWORD'); do kill -9 "$var";done
+```
+
 ### Remove extension in bash
 ```bash
 for i in *; do echo "${i%.txt}">> labels.txt; done
